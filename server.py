@@ -37,9 +37,12 @@ def handle_client(client_socket, client_address):
     client_socket.close()
 
 # Initialize the server socket
+ip_address = 'localhost'
+port = 8888
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('localhost', 8888))
+server_socket.bind((ip_address, port))
 server_socket.listen()
+print("Server listening on http://{0}:{1}".format(ip_address, port))
 
 # Initialize a list of connected clients
 clients = []

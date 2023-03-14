@@ -28,8 +28,10 @@ def receive_messages():
             print(f'Received: {message}')
 
 # Connect to the server
+ip_address = 'localhost'
+port = 8888
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('localhost', 8888))
+client_socket.connect((ip_address, port))
 
 # Start a separate thread to receive messages from the server
 threading.Thread(target=receive_messages).start()
