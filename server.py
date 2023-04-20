@@ -37,7 +37,7 @@ def handle_client(client_socket, client_address):
     client_socket.close()
 
 # Initialize the server socket
-ip_address = 'localhost'
+ip_address = 'localhost' # Type in the server's IP address
 port = 8888
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((ip_address, port))
